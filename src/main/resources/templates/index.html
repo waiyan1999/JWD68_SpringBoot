@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+</head>
+<body>
+<h3> This is Index </h3>
+<h3 th:text="${msg}"></h3>
+
+<h2>Switch Test</h2>
+
+	<div th:switch = "${msg}">
+		<p th:case = "'This is Spring Boot Demo'">This is Spring Boot Demo</p>
+		<p th:case = "'Hello'">Hello</p>
+		<p th:case = "*"> This is Default </p>
+	</div>
+	
+<h2> Test Messages Properties</h2>
+
+	<p th:text = "#{app.name}"></p>
+	<p th:text = "#{app1.name}"></p>
+	<p th:text = "#{app.car}"></p>
+	
+	
+<h2> Date Test</h2>
+
+	<p th:text = "${today}"></p>
+	<p th:text = "${#temporals.format(today,'dd-MM-yyyy')}"></p>
+	
+	<p>Date Util Test</p>
+	<p th:text = "${utilToday}"></p>
+	<p th:text = "${#dates.format(utilToday,'dd-MM-yyyy HH:mm:ss')}"></p>
+	
+	
+<h3>Dev Tools Test Hello</h3>
+
+</body>
+</html>

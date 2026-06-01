@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title> User List</title>
+</head>
+<body>
+
+<h3>User List</h3>
+<ul>
+<li th:each="user :${user_list}"  th:if="${user} == 'Aung Aung' " th:text=${user}></li>
+</ul>
+
+
+<h2>List Test</h2>
+
+<p th:text = "'List Size' + ${#lists.size(user_list)}"></p>
+
+<p th:if= "${#lists.size(user_list)} !=0 "> True</p>
+<p th:if= "${#lists.size(user_list)} == 0 "> False</p>
+	
+
+
+
+</body>
+</html>
