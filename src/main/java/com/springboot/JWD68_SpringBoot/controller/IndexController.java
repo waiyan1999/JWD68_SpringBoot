@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/")
 public class IndexController {
 	
-	@GetMapping("/")
+	@GetMapping("/index")
 	public String showIndex(Model m) {
 		m.addAttribute("msg","Hello World");
 		m.addAttribute("today", LocalDate.now());
@@ -30,6 +30,11 @@ public class IndexController {
 		m.addAttribute("user_list",userList);
 		return "user-list";
 		
+	}
+	
+	@GetMapping("/")
+	public String home() {
+		return "home";
 	}
 }
 

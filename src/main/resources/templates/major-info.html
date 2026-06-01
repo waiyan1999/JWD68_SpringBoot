@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title> Major Info</title>
+</head>
+<body>
+
+<h1> Major Info</h1>
+
+
+<a th:href ="@{/index}">Index</a>
+
+<a th:href ="@{/user-list}">User List</a>
+
+
+<h2>Major Information</h2>
+
+	<p th:text="${major}"></p>
+	<p th:text= "${major.name}"></p>
+	<p th:text = "${major.mark}"></p>
+
+</body>
+</html>
