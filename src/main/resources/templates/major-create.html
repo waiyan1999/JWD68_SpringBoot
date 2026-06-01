@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title> Home</title>
+</head>
+<body>
+
+<h1> Major Create</h1>
+
+
+<a th:href ="@{/index}">Index</a>
+
+<a th:href ="@{/user-list}">User List</a>
+
+<h2>Major Create Form</h2>
+
+<h2>Branch is WYTM</h2>
+
+<form th:action="@{/major/create}" th:object="${majorObj}" method="post">
+	Name
+	<input type="text" th:field="*{name}">
+	
+	<br>
+	
+	Marks
+	<input type="text" th:field="*{mark}">
+	<br>
+	
+	<button type="submit"> Create Major</button>
+</form>
+</body>
+</html>
